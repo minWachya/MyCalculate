@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">알바 정산</string>
+
+    <!--activity_main.xml-->
+    <string name="main_btn_calculate">정산</string>
+    <string name="main_btn_close">마감</string>
+
+    <!--activity_calculate.xml-->
+    <string name="calculate_tab1_lotto">로또</string>
+    <string name="calculate_tab2_pos">포스</string>
+    <string name="calculate_tab3_lottery">복권</string>
+    <string name="calculate_tab4_toto">토토</string>
+
+    <!--list_item_close.xml-->
+    <string name="list_item_close_num">1</string>
+    <string name="list_item_close_text">내용</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
