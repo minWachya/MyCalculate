@@ -10,6 +10,7 @@ import com.example.mycalculate.databinding.FragmentTab1LottoBinding
 private var _binding: FragmentTab1LottoBinding? = null
 private val binding get() = _binding!!
 
+// 1. 로또 정산 순서
 class Tab1LottoFragment : Fragment() {
 
     override fun onCreateView(

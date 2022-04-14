@@ -52,6 +52,21 @@
     <string name="tab2_pos_5">#계산원 정산 현횡#의 \'현금매출\'과 비교</string>
     <string name="tab2_pos_6">돈 빼고 묶기</string>
 
+    <!--3, 복권 정산 순서-->
+    <!--fragment_tab3_lottery.xml-->
+    <string name="tab3_lottery_1">당첨 복권 지급 처리</string>
+    <string name="tab3_lottery_2">추가한 금액 적기</string>
+    <string name="tab3_lottery_2_1">추가 금액</string>
+    <string name="tab3_lottery_3">복권 재고 세고, 재고 금액 적기</string>
+    <string name="tab3_lottery_3_1">재고 금액</string>
+    <string name="tab3_lottery_4">현금 판매액 적기</string>
+    <string name="tab3_lottery_5">당복지급액 적기</string>
+    <string name="tab3_lottery_6">당첨금 지금 초기화</string>
+    <string name="tab3_lottery_7">돈, 당첨복권 빼고 묶기</string>
+    <string name="tab3_lottery_8">확인</string>
+    <string name="tab3_lottery_8_1">이전 근무자 재고 금액</string>
+    <string name="tab3_lottery_result">결과</string>
+
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

@@ -88,4 +88,7 @@ class CustomMoneyCountView : ConstraintLayout {
                 5000*count5000 + 1000*count1000 + countElse
         tvResult.text = numberFormat.format(result).toString()
     }
+
+    // 정산 결과 반환
+    fun getResult(): String = tvResult.text.toString()
 }

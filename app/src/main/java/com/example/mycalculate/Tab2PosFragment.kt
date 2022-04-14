@@ -10,6 +10,7 @@ import com.example.mycalculate.databinding.FragmentTab2PosBinding
 private var _binding: FragmentTab2PosBinding? = null
 private val binding get() = _binding!!
 
+// 2. 포스 정산 순서
 class Tab2PosFragment : Fragment() {
 
     override fun onCreateView(
