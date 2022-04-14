@@ -37,18 +37,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/tvText" />
 
-    <!--2000-->
+    <!--50,000-->
     <TextView
-        android:id="@+id/tv2000"
-        android:layout_width="60dp"
+        android:id="@+id/tv50000"
+        android:layout_width="80dp"
         android:layout_height="wrap_content"
-        android:text="@string/custom_lottery_2000"
+        android:text="@string/custom_money_count_50000"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/edt2000"
+        app:layout_constraintBottom_toBottomOf="@+id/edt50000"
         app:layout_constraintStart_toStartOf="@+id/tvText"
-        app:layout_constraintTop_toTopOf="@+id/edt2000" />
+        app:layout_constraintTop_toTopOf="@+id/edt50000" />
     <EditText
-        android:id="@+id/edt2000"
+        android:id="@+id/edt50000"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -56,28 +56,88 @@
         android:textSize="18sp"
         android:inputType="number"
         android:layout_marginStart="20dp"
-        app:layout_constraintStart_toEndOf="@+id/tv2000"
+        app:layout_constraintStart_toEndOf="@+id/tv50000"
         app:layout_constraintTop_toBottomOf="@+id/tvText" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="@string/custom_lottery_count"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/edt2000"
-        app:layout_constraintStart_toEndOf="@+id/edt2000"
-        app:layout_constraintTop_toTopOf="@+id/edt2000" />
+        app:layout_constraintBottom_toBottomOf="@+id/edt50000"
+        app:layout_constraintStart_toEndOf="@+id/edt50000"
+        app:layout_constraintTop_toTopOf="@+id/edt50000" />
 
-    <!--1000-->
+    <!--10,000-->
     <TextView
-        android:id="@+id/tv1000"
-        android:layout_width="60dp"
+        android:id="@+id/tv10000"
+        android:layout_width="80dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="@string/custom_lottery_1000"
+        android:text="@string/custom_money_count_10000"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/edt10000"
+        app:layout_constraintStart_toStartOf="@+id/tvText"
+        app:layout_constraintTop_toBottomOf="@+id/edt50000" />
+    <EditText
+        android:id="@+id/edt10000"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/custom_lottery_hint"
+        android:textSize="18sp"
+        android:inputType="number"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toEndOf="@+id/tv10000"
+        app:layout_constraintTop_toBottomOf="@+id/edt50000" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/custom_lottery_count"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/edt10000"
+        app:layout_constraintStart_toEndOf="@+id/edt10000"
+        app:layout_constraintTop_toTopOf="@+id/edt10000" />
+
+    <!--5,000-->
+    <TextView
+        android:id="@+id/tv5000"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/custom_money_count_5000"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/edt5000"
+        app:layout_constraintStart_toStartOf="@+id/tvText"
+        app:layout_constraintTop_toBottomOf="@+id/tv10000" />
+    <EditText
+        android:id="@+id/edt5000"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/custom_lottery_hint"
+        android:textSize="18sp"
+        android:inputType="number"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toEndOf="@+id/tv5000"
+        app:layout_constraintTop_toBottomOf="@+id/edt10000" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/custom_lottery_count"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/edt5000"
+        app:layout_constraintStart_toEndOf="@+id/edt5000"
+        app:layout_constraintTop_toTopOf="@+id/edt5000" />
+
+    <!--1,000-->
+    <TextView
+        android:id="@+id/tv1000"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/custom_money_count_1000"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="@+id/edt1000"
         app:layout_constraintStart_toStartOf="@+id/tvText"
-        app:layout_constraintTop_toBottomOf="@+id/tv2000" />
+        app:layout_constraintTop_toBottomOf="@+id/tv5000" />
     <EditText
         android:id="@+id/edt1000"
         android:layout_width="100dp"
@@ -87,7 +147,7 @@
         android:inputType="number"
         android:layout_marginStart="20dp"
         app:layout_constraintStart_toEndOf="@+id/tv1000"
-        app:layout_constraintTop_toBottomOf="@+id/edt2000" />
+        app:layout_constraintTop_toBottomOf="@+id/edt5000" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -97,37 +157,37 @@
         app:layout_constraintStart_toEndOf="@+id/edt1000"
         app:layout_constraintTop_toTopOf="@+id/edt1000" />
 
-    <!--연금-->
+    <!--동전-->
     <TextView
-        android:id="@+id/tvYear"
-        android:layout_width="60dp"
+        android:id="@+id/tvElse"
+        android:layout_width="80dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="@string/custom_lottery_year"
+        android:text="@string/custom_money_count_else"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/edtYear"
+        app:layout_constraintBottom_toBottomOf="@+id/edtElse"
         app:layout_constraintStart_toStartOf="@+id/tvText"
         app:layout_constraintTop_toBottomOf="@+id/tv1000" />
     <EditText
-        android:id="@+id/edtYear"
+        android:id="@+id/edtElse"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:hint="@string/custom_lottery_hint"
         android:textSize="18sp"
         android:inputType="number"
         android:layout_marginStart="20dp"
-        app:layout_constraintStart_toEndOf="@+id/tvYear"
+        app:layout_constraintStart_toEndOf="@+id/tvElse"
         app:layout_constraintTop_toBottomOf="@+id/edt1000" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="@string/custom_lottery_count"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/edtYear"
-        app:layout_constraintStart_toEndOf="@+id/edtYear"
-        app:layout_constraintTop_toTopOf="@+id/edtYear" />
+        app:layout_constraintBottom_toBottomOf="@+id/edtElse"
+        app:layout_constraintStart_toEndOf="@+id/edtElse"
+        app:layout_constraintTop_toTopOf="@+id/edtElse" />
 
     <View
         android:id="@+id/view"
@@ -135,18 +195,8 @@
         android:layout_height="1dp"
         android:layout_margin="10dp"
         android:background="@color/black"
-        app:layout_constraintTop_toBottomOf="@+id/edtYear"
+        app:layout_constraintTop_toBottomOf="@+id/edtElse"
         tools:layout_editor_absoluteX="30dp" />
-
-    <TextView
-        android:id="@+id/tvCalculateType"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/custom_lottery_type"
-        android:textSize="18sp"
-        android:layout_marginTop="10dp"
-        app:layout_constraintStart_toStartOf="@+id/tvYear"
-        app:layout_constraintTop_toBottomOf="@+id/view" />
 
     <TextView
         android:id="@+id/tvCalculateResult"
@@ -154,8 +204,8 @@
         android:layout_height="wrap_content"
         android:text="@string/custom_lottery_result"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/tvCalculateType"
-        app:layout_constraintEnd_toEndOf="@+id/edtYear"
-        app:layout_constraintTop_toTopOf="@+id/tvCalculateType" />
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/edtElse"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -11,14 +11,6 @@
     <string name="calculate_tab3_lottery">복권</string>
     <string name="calculate_tab4_toto">토토</string>
 
-    <!--fragment_tab2_pos.xml-->
-    <string name="tab2_pos_1">동전 분류</string>
-    <string name="tab2_pos_2">\'메뉴\' &gt; \'마감정산\' &gt; 돈입력</string>
-    <string name="tab2_pos_3">엔터 &gt; 다음 근무자 로그인</string>
-    <string name="tab2_pos_4">#마감 입금# - 50,000 뺀 금액 적기</string>
-    <string name="tab2_pos_5">#계산원 정산 현횡#의 \'현금매출\'과 비교</string>
-    <string name="tab2_pos_6">돈 빼고 묶기</string>
-
     <!--list_item_close.xml-->
     <string name="list_item_close_num">1</string>
     <string name="list_item_close_text">내용</string>
@@ -34,12 +26,32 @@
     <string name="custom_lottery_count">개</string>
     <string name="custom_lottery_type">정산 타입</string>
     <string name="custom_lottery_result">계산 결과</string>
-<!--    <string name="custom_lottery_50000">50,000원</string>-->
-<!--    <string name="custom_lottery_10000">10,000원</string>-->
-<!--    <string name="custom_lottery_5000">5,000원</string>-->
-<!--    <string name="custom_lottery_1000">1,000원</string>-->
-<!--    <string name="custom_lottery_500">500원</string>-->
-<!--    <string name="custom_lottery_100">100원</string>-->
+
+    <!--custom_money_count_view.xml-->
+    <string name="custom_money_count_50000">50,000원</string>
+    <string name="custom_money_count_10000">10,000원</string>
+    <string name="custom_money_count_5000">5,000원</string>
+    <string name="custom_money_count_1000">1,000원</string>
+    <string name="custom_money_count_else">동전</string>
+
+    <!--1, 로또 정산 순서-->
+    <!--fragment_tab1_lotto.xml-->
+    <string name="tab1_lotto_1">돈 세기</string>
+    <string name="tab1_lotto_2">보고서 &gt; 영업 보고서 &gt; 2장 인쇄</string>
+    <string name="tab1_lotto_2_1">1장 보관</string>
+    <string name="tab1_lotto_2_2">1장 여백에 돈 센 거 적기</string>
+    <string name="tab1_lotto_3">돈 빼고 묶기</string>
+    <string name="tab1_lotto_4">로또인수인계대장 + 야간 체크</string>
+
+    <!--2, 포스 정산 순서-->
+    <!--fragment_tab2_pos.xml-->
+    <string name="tab2_pos_1">동전 분류</string>
+    <string name="tab2_pos_2">\'메뉴\' &gt; \'마감정산\' &gt; 돈입력</string>
+    <string name="tab2_pos_3">엔터 &gt; 다음 근무자 로그인</string>
+    <string name="tab2_pos_4">#마감 입금# - 50,000 뺀 금액 적기</string>
+    <string name="tab2_pos_5">#계산원 정산 현횡#의 \'현금매출\'과 비교</string>
+    <string name="tab2_pos_6">돈 빼고 묶기</string>
+
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

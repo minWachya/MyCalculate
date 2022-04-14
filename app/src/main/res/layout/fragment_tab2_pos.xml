@@ -16,8 +16,8 @@
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:num="1"
-            app:text="@string/tab2_pos_1" />
+            app:num_basic="1"
+            app:text_basic="@string/tab2_pos_1" />
 
         <com.example.mycalculate.CustomBasicView
             android:id="@+id/step2"
@@ -25,8 +25,8 @@
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/step1"
-            app:num="2"
-            app:text="@string/tab2_pos_2" />
+            app:num_basic="2"
+            app:text_basic="@string/tab2_pos_2" />
 
         <com.example.mycalculate.CustomBasicView
             android:id="@+id/step3"
@@ -34,8 +34,8 @@
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/step2"
-            app:num="3"
-            app:text="@string/tab2_pos_3" />
+            app:num_basic="3"
+            app:text_basic="@string/tab2_pos_3" />
 
         <com.example.mycalculate.CustomBasicView
             android:id="@+id/step4"
@@ -43,8 +43,8 @@
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/step3"
-            app:num="4"
-            app:text="@string/tab2_pos_4" />
+            app:num_basic="4"
+            app:text_basic="@string/tab2_pos_4" />
 
         <com.example.mycalculate.CustomBasicView
             android:id="@+id/step5"
@@ -52,8 +52,8 @@
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/step4"
-            app:num="5"
-            app:text="@string/tab2_pos_5" />
+            app:num_basic="5"
+            app:text_basic="@string/tab2_pos_5" />
 
         <com.example.mycalculate.CustomBasicView
             android:id="@+id/step6"
@@ -61,8 +61,8 @@
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/step5"
-            app:num="6"
-            app:text="@string/tab2_pos_6" />
+            app:num_basic="6"
+            app:text_basic="@string/tab2_pos_6" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

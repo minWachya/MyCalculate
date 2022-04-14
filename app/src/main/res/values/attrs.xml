@@ -2,7 +2,35 @@
 <resources>
     <!--기본 커스텀 뷰-->
     <declare-styleable name="CustomBasicView">
-        <attr name="num" format="reference|string" />
-        <attr name="text" format="reference|string" />
+        <attr name="num_basic" format="reference|string" />
+        <attr name="text_basic" format="reference|string" />
     </declare-styleable>
+
+    <!--EditTest 커스텀 뷰-->
+    <declare-styleable name="CustomEditView">
+        <attr name="num_edit" format="reference|string" />
+        <attr name="text_edit" format="reference|string" />
+    </declare-styleable>
+
+    <!--Option 커스텀 뷰-->
+    <declare-styleable name="CustomOptionView">
+        <attr name="num_option" format="reference|string" />
+        <attr name="text_option" format="reference|string" />
+        <attr name="option1_text" format="reference|string" />
+        <attr name="option2_text" format="reference|string" />
+    </declare-styleable>
+
+    <!--Lottery 커스텀 뷰-->
+    <declare-styleable name="CustomLotteryView">
+        <attr name="num_lottery" format="reference|string" />
+        <attr name="text_lottery" format="reference|string" />
+        <attr name="type_lottery" format="reference|string" />
+    </declare-styleable>
+
+    <!--MoneyCount 커스텀 뷰-->
+    <declare-styleable name="CustomMoneyCountView">
+        <attr name="num_money_count" format="reference|string" />
+        <attr name="text_money_count" format="reference|string" />
+    </declare-styleable>
+
 </resources>
