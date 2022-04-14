@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/tvNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/list_item_close_num"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="@string/list_item_close_text"
+        android:textSize="18sp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvNum"
+        app:layout_constraintEnd_toStartOf="@+id/checkBox"
+        app:layout_constraintStart_toEndOf="@+id/tvNum"
+        app:layout_constraintTop_toTopOf="@+id/tvNum" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:buttonTint="@color/purple_200"
+        app:layout_constraintBottom_toBottomOf="@+id/tvText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvText" />
+
+    <ImageView
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:src="@drawable/ic_circle"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvOption1"
+        app:layout_constraintEnd_toStartOf="@+id/tvOption1"
+        app:layout_constraintTop_toTopOf="@+id/tvOption1" />
+    <TextView
+        android:id="@+id/tvOption1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/list_item_close_text"
+        android:textSize="18sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="80dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvText" />
+
+    <ImageView
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:src="@drawable/ic_circle"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvOption2"
+        app:layout_constraintEnd_toStartOf="@+id/tvOption2"
+        app:layout_constraintTop_toTopOf="@+id/tvOption2" />
+    <TextView
+        android:id="@+id/tvOption2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/list_item_close_text"
+        android:textSize="18sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="80dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvOption1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--기본 커스텀 뷰-->
+    <declare-styleable name="CustomBasicView">
+        <attr name="num" format="reference|string" />
+        <attr name="text" format="reference|string" />
+    </declare-styleable>
+</resources>

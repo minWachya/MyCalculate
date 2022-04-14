@@ -1,14 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Tab2PosFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
 
-</FrameLayout>
+        <com.example.mycalculate.CustomBasicView
+            android:id="@+id/step1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:num="1"
+            app:text="@string/tab2_pos_1" />
+
+        <com.example.mycalculate.CustomBasicView
+            android:id="@+id/step2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/step1"
+            app:num="2"
+            app:text="@string/tab2_pos_2" />
+
+        <com.example.mycalculate.CustomBasicView
+            android:id="@+id/step3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/step2"
+            app:num="3"
+            app:text="@string/tab2_pos_3" />
+
+        <com.example.mycalculate.CustomBasicView
+            android:id="@+id/step4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/step3"
+            app:num="4"
+            app:text="@string/tab2_pos_4" />
+
+        <com.example.mycalculate.CustomBasicView
+            android:id="@+id/step5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/step4"
+            app:num="5"
+            app:text="@string/tab2_pos_5" />
+
+        <com.example.mycalculate.CustomBasicView
+            android:id="@+id/step6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/step5"
+            app:num="6"
+            app:text="@string/tab2_pos_6" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
