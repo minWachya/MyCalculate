@@ -44,19 +44,40 @@
         android:layout_height="wrap_content"
         android:text="@string/custom_lottery_2000"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/edt2000"
+        app:layout_constraintBottom_toBottomOf="@+id/edt2000_set"
         app:layout_constraintStart_toStartOf="@+id/tvText"
-        app:layout_constraintTop_toTopOf="@+id/edt2000" />
+        app:layout_constraintTop_toTopOf="@+id/edt2000_set" />
     <EditText
-        android:id="@+id/edt2000"
-        android:layout_width="100dp"
+        android:id="@+id/edt2000_set"
+        android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:hint="@string/custom_lottery_hint"
+        android:hint="@string/custom_lottery_hint_set"
         android:textSize="18sp"
         android:inputType="number"
         android:layout_marginStart="20dp"
         app:layout_constraintStart_toEndOf="@+id/tv2000"
+        app:layout_constraintTop_toBottomOf="@+id/tvText" />
+    <TextView
+        android:id="@+id/text2000"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/custom_lottery_2000x"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/edt2000_set"
+        app:layout_constraintStart_toEndOf="@+id/edt2000_set"
+        app:layout_constraintTop_toTopOf="@+id/edt2000_set" />
+
+    <EditText
+        android:id="@+id/edt2000"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="@string/custom_lottery_hint_not_set"
+        android:inputType="number"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/edt2000_set"
+        app:layout_constraintStart_toEndOf="@+id/text2000"
         app:layout_constraintTop_toBottomOf="@+id/tvText" />
     <TextView
         android:layout_width="wrap_content"
@@ -75,18 +96,38 @@
         android:layout_marginTop="10dp"
         android:text="@string/custom_lottery_1000"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/edt1000"
+        app:layout_constraintBottom_toBottomOf="@+id/edt1000_set"
         app:layout_constraintStart_toStartOf="@+id/tvText"
         app:layout_constraintTop_toBottomOf="@+id/tv2000" />
     <EditText
-        android:id="@+id/edt1000"
-        android:layout_width="100dp"
+        android:id="@+id/edt1000_set"
+        android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:hint="@string/custom_lottery_hint"
+        android:hint="@string/custom_lottery_hint_set"
         android:textSize="18sp"
         android:inputType="number"
         android:layout_marginStart="20dp"
         app:layout_constraintStart_toEndOf="@+id/tv1000"
+        app:layout_constraintTop_toBottomOf="@+id/edt2000_set" />
+    <TextView
+        android:id="@+id/text1000"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/custom_lottery_1000x"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/edt1000_set"
+        app:layout_constraintStart_toEndOf="@+id/edt1000_set"
+        app:layout_constraintTop_toTopOf="@+id/edt1000_set" />
+
+    <EditText
+        android:id="@+id/edt1000"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/custom_lottery_hint_not_set"
+        android:inputType="number"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/edt1000_set"
+        app:layout_constraintStart_toEndOf="@+id/text1000"
         app:layout_constraintTop_toBottomOf="@+id/edt2000" />
     <TextView
         android:layout_width="wrap_content"
@@ -117,7 +158,7 @@
         android:inputType="number"
         android:layout_marginStart="20dp"
         app:layout_constraintStart_toEndOf="@+id/tvYear"
-        app:layout_constraintTop_toBottomOf="@+id/edt1000" />
+        app:layout_constraintTop_toBottomOf="@+id/edt1000_set" />
 
     <TextView
         android:id="@+id/textView4"

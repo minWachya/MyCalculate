@@ -20,8 +20,12 @@
 
     <!--custom_lottery_view.xml-->
     <string name="custom_lottery_hint">0</string>
+    <string name="custom_lottery_hint_set">세트</string>
+    <string name="custom_lottery_hint_not_set">낱개</string>
     <string name="custom_lottery_2000">2000</string>
+    <string name="custom_lottery_2000x">x 2 +</string>
     <string name="custom_lottery_1000">1000</string>
+    <string name="custom_lottery_1000x">x 4 +</string>
     <string name="custom_lottery_year">연금</string>
     <string name="custom_lottery_count">개</string>
     <string name="custom_lottery_type">정산 타입</string>

@@ -16,11 +16,14 @@ class CustomLotteryView : ConstraintLayout {
     // 커스텀 뷰 안에 들어가는 아이템
     lateinit var tvNum: TextView         // 순서
     lateinit var tvText: TextView        // 내용
-    lateinit var edt2000: EditText       // 2000원 갯수 입력창
-    lateinit var edt1000: EditText       // 1000원 갯수 입력창
-    lateinit var edtYear: EditText      // 연금 갯수 입력 창
+    lateinit var edt2000Set: EditText    // 2000원 세트 갯수 입력창
+    lateinit var edt2000: EditText       // 2000원 낱개 갯수 입력창
+    lateinit var edt1000Set: EditText    // 1000원 세트 갯수 입력창
+    lateinit var edt1000: EditText       // 1000원 낱개 갯수 입력창
+    lateinit var edtYear: EditText       // 연금 갯수 입력 창
     lateinit var tvType: TextView        // 정산 타입
-    lateinit var tvResult: TextView      // 정산 결과
+    lateinit var tvResult: TextView      // 정산 결과 TextView
+    private var result = 0               // 정산 결과
     // 숫자 3자리마다 , 찍기
     private val numberFormat = NumberFormat.getInstance(Locale.KOREA)
 
@@ -40,7 +43,9 @@ class CustomLotteryView : ConstraintLayout {
         addView(view)
         tvNum = view.findViewById(R.id.tvNum)
         tvText = view.findViewById(R.id.tvText)
+        edt2000Set = view.findViewById(R.id.edt2000_set)
         edt2000 = view.findViewById(R.id.edt2000)
+        edt1000Set = view.findViewById(R.id.edt1000_set)
         edt1000 = view.findViewById(R.id.edt1000)
         edtYear = view.findViewById(R.id.edtYear)
         tvType = view.findViewById(R.id.tvCalculateType)
@@ -72,28 +77,25 @@ class CustomLotteryView : ConstraintLayout {
 
     // 리스너 달기: 복권 숫자 입력 시 자동 정산
     private fun setListener() {
+        edt2000Set.doOnTextChanged { _, _, _, _ -> calculateMoney() }
         edt2000.doOnTextChanged { _, _, _, _ -> calculateMoney() }
+        edt1000Set.doOnTextChanged { _, _, _, _ -> calculateMoney() }
         edt1000.doOnTextChanged { _, _, _, _ -> calculateMoney() }
         edtYear.doOnTextChanged { _, _, _, _ -> calculateMoney() }
     }
     // 돈 입력 시 바로 계산하기
     private fun calculateMoney() {
+        val count2000Set = edt2000Set.text.toString().toIntOrNull() ?: 0
         val count2000 = edt2000.text.toString().toIntOrNull() ?: 0
+        val count1000Set = edt1000Set.text.toString().toIntOrNull() ?: 0
         val count1000 = edt1000.text.toString().toIntOrNull() ?: 0
         val countYear = edtYear.text.toString().toIntOrNull() ?: 0
 
-        val result = 2000*count2000 + 1000*count1000 + 1000*countYear
+        result = 2000*2*count2000Set + 2000*count2000 +
+                1000*4*count1000Set + 1000*count1000 + 1000*countYear
         tvResult.text = numberFormat.format(result).toString()
     }
 
     // 정산 결과 반환
-    fun getResult(): String {
-        val count2000 = edt2000.text.toString().toIntOrNull() ?: 0
-        val count1000 = edt1000.text.toString().toIntOrNull() ?: 0
-        val countYear = edtYear.text.toString().toIntOrNull() ?: 0
-
-        val result = 2000*count2000 + 1000*count1000 + 1000*countYear
-        return result.toString()
-    }
-
+    fun getResult(): String = result.toString()
 }
