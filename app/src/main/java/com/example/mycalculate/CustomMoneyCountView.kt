@@ -90,5 +90,14 @@ class CustomMoneyCountView : ConstraintLayout {
     }
 
     // 정산 결과 반환
-    fun getResult(): String = tvResult.text.toString()
+    fun getResult(): String {
+        val count50000 = edt50000.text.toString().toIntOrNull() ?: 0
+        val count10000 = edt10000.text.toString().toIntOrNull() ?: 0
+        val count5000 = edt5000.text.toString().toIntOrNull() ?: 0
+        val count1000 = edt1000.text.toString().toIntOrNull() ?: 0
+        val countElse = edtElse.text.toString().toIntOrNull() ?: 0
+        val result = 50000*count50000 + 10000*count10000 +
+                5000*count5000 + 1000*count1000 + countElse
+        return result.toString()
+    }
 }

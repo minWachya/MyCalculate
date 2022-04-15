@@ -1,6 +1,7 @@
 package com.example.mycalculate
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -25,10 +26,10 @@ class Tab3LotteryFragment : Fragment() {
         // 8번의 <확인> 버튼 누르면 정산 시작
         // 전 근무자 재고 금액 + 추가 금액 - 현금 판매액 - 당첨 지급액 == 재고 금액인지 확인
         binding.btnCheck.setOnClickListener {
-            val prevMoney = binding.edtText.text.toString().toIntOrNull() ?: 0  // 전 근무자 재고 금액
+            val prevMoney = binding.edtTextPrev.text.toString().toIntOrNull() ?: 0  // 전 근무자 재고 금액
             val plusMoney = binding.step2.getResult().toIntOrNull() ?: 0   // 추가 금액
             val curMoney = binding.step4.getResult().toIntOrNull() ?: 0    // 현금 판매액
-            val winMoney = binding.step5.edtText.text.toString().toIntOrNull() ?: 0   // 당복 지급액
+            val winMoney = binding.step5.getEditText().toIntOrNull() ?: 0   // 당복 지급액
             val stockMoney = binding.step3.getResult().toIntOrNull() ?: 0  // 재고 금액
 
             val result = prevMoney + plusMoney - curMoney - winMoney
@@ -39,12 +40,12 @@ class Tab3LotteryFragment : Fragment() {
                 // 정산 틀림^^: 재고 금액이 적은 만큼 빈 거임...
                 result > stockMoney -> {
                     val num = NumberFormat.getInstance(Locale.KOREA).format(result - stockMoney).toString()
-                    binding.tvResult.text = "민영아... $num 원이 없네...? 괜찮아"
+                    binding.tvResult.text = "민영아... $num 원이 없네...? 괜찮아 안죽어!!"
                 }
                 // 정산 틀림^^: 재고 금액이 많은 만큼 많은 거임...
-                result > stockMoney -> {
+                result < stockMoney -> {
                     val num = NumberFormat.getInstance(Locale.KOREA).format(stockMoney - result).toString()
-                    binding.tvResult.text = "민영아... $num 원이 많다?"
+                    binding.tvResult.text = "민영아 $num 원이 많아~♡"
                 }
                 else -> binding.tvResult.text = "뭔가의 오류 발생"
             }

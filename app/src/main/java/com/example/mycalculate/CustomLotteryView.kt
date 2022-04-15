@@ -87,6 +87,13 @@ class CustomLotteryView : ConstraintLayout {
     }
 
     // 정산 결과 반환
-    fun getResult(): String = tvResult.text.toString()
+    fun getResult(): String {
+        val count2000 = edt2000.text.toString().toIntOrNull() ?: 0
+        val count1000 = edt1000.text.toString().toIntOrNull() ?: 0
+        val countYear = edtYear.text.toString().toIntOrNull() ?: 0
+
+        val result = 2000*count2000 + 1000*count1000 + 1000*countYear
+        return result.toString()
+    }
 
 }
