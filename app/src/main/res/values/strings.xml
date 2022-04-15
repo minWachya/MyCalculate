@@ -19,7 +19,7 @@
     <string name="custom_edit_hint">ex)10000</string>
 
     <!--custom_lottery_view.xml-->
-    <string name="custom_lottery_hint">갯수</string>
+    <string name="custom_lottery_hint">0</string>
     <string name="custom_lottery_2000">2000</string>
     <string name="custom_lottery_1000">1000</string>
     <string name="custom_lottery_year">연금</string>
@@ -49,7 +49,7 @@
     <string name="tab2_pos_2">\'메뉴\' &gt; \'마감정산\' &gt; 돈입력</string>
     <string name="tab2_pos_3">엔터 &gt; 다음 근무자 로그인</string>
     <string name="tab2_pos_4">#마감 입금# - 50,000 뺀 금액 적기</string>
-    <string name="tab2_pos_5">#계산원 정산 현횡#의 \'현금매출\'과 비교</string>
+    <string name="tab2_pos_5">#계산원 정산 현황#의 \'현금매출\'과 비교</string>
     <string name="tab2_pos_6">돈 빼고 묶기</string>
 
     <!--3, 복권 정산 순서-->
@@ -67,7 +67,21 @@
     <string name="tab3_lottery_8_1">이전 근무자 재고 금액</string>
     <string name="tab3_lottery_result">결과</string>
 
+    <!--4, 토토 정산 순서-->
+    <string name="tab4_toto_1">돈 세기</string>
+    <string name="tab4_toto_2">\'현시점 매출 조회\' &gt; 2장 출력</string>
+    <string name="tab4_toto_2_1">1장 보관</string>
+    <string name="tab4_toto_2_2">1장 여백에 돈 센 거 적기</string>
+    <string name="tab4_toto_3">돈 빼고 묶기</string>
+    <string name="tab4_toto_4">토토인수인계대장</string>
+    <string name="tab4_toto_4_2_1">전체 판매금</string>
+    <string name="tab4_toto_4_2_2">이전 전체 판매금</string>
+    <string name="tab4_toto_4_2_result">현시점 판매금</string>
+    <string name="tab4_toto_4_3_1">전체 환급</string>
+    <string name="tab4_toto_4_3_2">전체 환불</string>
+    <string name="tab4_toto_4_3_result">전체 환급 + 환불</string>
+    <string name="tab4_toto_4_4">이전 전체 환급 + 환불</string>
+    <string name="tab4_toto_4_4_result">현시점 환급 + 환불</string>
+    <string name="tab4_toto_count">원</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
