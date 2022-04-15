@@ -1,8 +1,10 @@
-package com.example.mycalculate
+package com.example.mycalculate.main
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.mycalculate.close.CloseActivity
+import com.example.mycalculate.close_calculate.CalculateActivity
 import com.example.mycalculate.databinding.ActivityMainBinding
 
 private lateinit var binding: ActivityMainBinding

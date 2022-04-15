@@ -4,14 +4,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".Tab2PosFragment">
+    tools:context=".close_calculate.Tab2PosFragment">
 
     <!--2, 포스 정산 순서-->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <com.example.mycalculate.CustomBasicView
+        <com.example.mycalculate.custom.CustomBasicView
             android:id="@+id/step1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -20,7 +20,7 @@
             app:num_basic="1"
             app:text_basic="@string/tab2_pos_1" />
 
-        <com.example.mycalculate.CustomBasicView
+        <com.example.mycalculate.custom.CustomBasicView
             android:id="@+id/step2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -29,7 +29,7 @@
             app:num_basic="2"
             app:text_basic="@string/tab2_pos_2" />
 
-        <com.example.mycalculate.CustomBasicView
+        <com.example.mycalculate.custom.CustomBasicView
             android:id="@+id/step3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -38,7 +38,7 @@
             app:num_basic="3"
             app:text_basic="@string/tab2_pos_3" />
 
-        <com.example.mycalculate.CustomBasicView
+        <com.example.mycalculate.custom.CustomBasicView
             android:id="@+id/step4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -47,7 +47,7 @@
             app:num_basic="4"
             app:text_basic="@string/tab2_pos_4" />
 
-        <com.example.mycalculate.CustomBasicView
+        <com.example.mycalculate.custom.CustomBasicView
             android:id="@+id/step5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -56,7 +56,7 @@
             app:num_basic="5"
             app:text_basic="@string/tab2_pos_5" />
 
-        <com.example.mycalculate.CustomBasicView
+        <com.example.mycalculate.custom.CustomBasicView
             android:id="@+id/step6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

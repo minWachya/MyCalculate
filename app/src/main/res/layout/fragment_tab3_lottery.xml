@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Tab3LotteryFragment">
+    tools:context=".close_calculate.Tab3LotteryFragment">
 
     <!--3, 복권 정산 순서-->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <com.example.mycalculate.CustomBasicView
+        <com.example.mycalculate.custom.CustomBasicView
             android:id="@+id/step1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -20,7 +20,7 @@
             app:num_basic="1"
             app:text_basic="@string/tab3_lottery_1" />
 
-        <com.example.mycalculate.CustomLotteryView
+        <com.example.mycalculate.custom.CustomLotteryView
             android:id="@+id/step2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -30,7 +30,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/step1" />
 
-        <com.example.mycalculate.CustomLotteryView
+        <com.example.mycalculate.custom.CustomLotteryView
             android:id="@+id/step3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -40,7 +40,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/step2" />
 
-        <com.example.mycalculate.CustomMoneyCountView
+        <com.example.mycalculate.custom.CustomMoneyCountView
             android:id="@+id/step4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -49,7 +49,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/step3"/>
 
-        <com.example.mycalculate.CustomEditView
+        <com.example.mycalculate.custom.CustomEditView
             android:id="@+id/step5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -58,7 +58,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/step4"/>
 
-        <com.example.mycalculate.CustomBasicView
+        <com.example.mycalculate.custom.CustomBasicView
             android:id="@+id/step6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -67,7 +67,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/step5"/>
 
-        <com.example.mycalculate.CustomBasicView
+        <com.example.mycalculate.custom.CustomBasicView
             android:id="@+id/step7"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -76,7 +76,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/step6"/>
 
-        <com.example.mycalculate.CustomBasicView
+        <com.example.mycalculate.custom.CustomBasicView
             android:id="@+id/step8"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

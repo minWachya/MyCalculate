@@ -1,4 +1,4 @@
-package com.example.mycalculate
+package com.example.mycalculate.custom
 
 import android.content.Context
 import android.content.res.TypedArray
@@ -6,6 +6,7 @@ import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
+import com.example.mycalculate.R
 
 // Option 위젯(순서+내용+option1+option2+체크박스)
 class CustomOptionView : ConstraintLayout {

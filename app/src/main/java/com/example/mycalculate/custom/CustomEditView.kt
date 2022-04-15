@@ -1,17 +1,20 @@
-package com.example.mycalculate
+package com.example.mycalculate.custom
 
 import android.content.Context
 import android.content.res.TypedArray
 import android.util.AttributeSet
 import android.view.LayoutInflater
+import android.widget.EditText
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
+import com.example.mycalculate.R
 
-// 기본 위젯(순서+내용+체크박스)
-class CustomBasicView : ConstraintLayout {
+// EditText 위젯(순서+내용+EditText+체크박스)
+class CustomEditView : ConstraintLayout {
     // 커스텀 뷰 안에 들어가는 아이템
     lateinit var tvNum: TextView         // 순서
     lateinit var tvText: TextView        // 내용
+    lateinit var edtText: EditText       // EditText
 
     // 생성자
     constructor(context: Context?) : super(context!!){
@@ -24,28 +27,31 @@ class CustomBasicView : ConstraintLayout {
 
     // 초기화
     private fun init(context:Context?) {
-        val view = LayoutInflater.from(context).inflate(R.layout.custom_basic_view,this,false)
+        val view = LayoutInflater.from(context).inflate(R.layout.custom_edit_view,this,false)
         addView(view)
         tvNum = view.findViewById(R.id.tvNum)
         tvText = view.findViewById(R.id.tvText)
+        edtText = view.findViewById(R.id.edtText)
     }
 
     // 속성 가져오기
     private fun getAttrs(attrs: AttributeSet?){
-        val typedArray = context.obtainStyledAttributes(attrs, R.styleable.CustomBasicView)
+        val typedArray = context.obtainStyledAttributes(attrs, R.styleable.CustomEditView)
         setTypeArray(typedArray)
     }
 
     // 속성 사용하기
     private fun setTypeArray(typedArray : TypedArray) {
-        // 순서: CustomBasicView 이름으로 만든 attrs.xml 속성중 num_basic 참조
-        val num = typedArray.getText(R.styleable.CustomBasicView_num_basic)
+        // 순서: CustomEditView 이름으로 만든 attrs.xml 속성중 num_edit 참조
+        val num = typedArray.getText(R.styleable.CustomEditView_num_edit)
         tvNum.text = num
 
-        // 내용: CustomBasicView 이름으로 만든 attrs.xml 속성중 text_basic 참조
-        val text = typedArray.getText(R.styleable.CustomBasicView_text_basic)
+        // 내용: CustomEditView 이름으로 만든 attrs.xml 속성중 text_edit 참조
+        val text = typedArray.getText(R.styleable.CustomEditView_text_edit)
         tvText.text = text
 
         typedArray.recycle()
     }
+
+    fun getEditText(): String = edtText.text.toString()
 }

@@ -1,4 +1,4 @@
-package com.example.mycalculate
+package com.example.mycalculate.custom
 
 import android.content.Context
 import android.content.res.TypedArray
@@ -8,6 +8,7 @@ import android.widget.EditText
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.widget.doOnTextChanged
+import com.example.mycalculate.R
 import java.text.NumberFormat
 import java.util.*
 

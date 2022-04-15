@@ -1,4 +1,4 @@
-package com.example.mycalculate
+package com.example.mycalculate.close_calculate
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

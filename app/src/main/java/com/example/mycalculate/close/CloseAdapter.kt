@@ -1,4 +1,4 @@
-package com.example.mycalculate
+package com.example.mycalculate.close
 
 import android.view.LayoutInflater
 import android.view.View
