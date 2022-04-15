@@ -6,6 +6,7 @@ import android.os.Bundle
 import com.example.mycalculate.close.CloseActivity
 import com.example.mycalculate.close_calculate.CalculateActivity
 import com.example.mycalculate.databinding.ActivityMainBinding
+import com.example.mycalculate.rotate_calculate.RotateCalculateActivity
 
 private lateinit var binding: ActivityMainBinding
 
@@ -16,9 +17,15 @@ class MainActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
-        // '정산' 버튼 누르면 정산 화면으로 이동
+        // '마감 정산' 버튼 누르면 마감 정산 화면으로 이동
         binding.btnCalculate.setOnClickListener {
             val intent = Intent(this@MainActivity, CalculateActivity::class.java)
+            startActivity(intent)
+        }
+
+        // '교대 정산' 버튼 누르면 교대 정산 화면으로 이동
+        binding.btnRotateCalculate.setOnClickListener {
+            val intent = Intent(this@MainActivity, RotateCalculateActivity::class.java)
             startActivity(intent)
         }
 

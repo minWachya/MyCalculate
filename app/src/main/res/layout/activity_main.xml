@@ -17,13 +17,23 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
+        android:id="@+id/btn_rotate_calculate"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:text="@string/main_btn_rotate_calculate"
+        android:layout_margin="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_calculate"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
         android:id="@+id/btn_close"
         android:layout_width="wrap_content"
         android:layout_height="100dp"
         android:text="@string/main_btn_close"
         android:layout_margin="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btn_calculate"
+        app:layout_constraintStart_toEndOf="@+id/btn_rotate_calculate"
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

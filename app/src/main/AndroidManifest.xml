@@ -10,9 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
         <activity
+            android:name=".rotate_calculate.RotateCalculateActivity"
+            android:exported="false"
+            android:label="교대 정산 화면"/>
+        <activity
             android:name=".close_calculate.CalculateActivity"
             android:exported="false"
-            android:label="정산 화면" />
+            android:label="마감 정산 화면" />
         <activity
             android:name=".close.CloseActivity"
             android:exported="false"
