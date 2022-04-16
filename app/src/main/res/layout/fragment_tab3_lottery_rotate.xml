@@ -1,14 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".rotate_calculate.Tab3LotteryRotateFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <!--3. 복권 교대 정산-->
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
 
-</FrameLayout>
+        <com.example.mycalculate.custom.CustomLotteryView
+            android:id="@+id/step1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:text_lottery="@string/tab3_lottery_rotate_1"
+            app:num_lottery="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.example.mycalculate.custom.CustomMoneyCountView
+            android:id="@+id/step2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:num_money_count="2"
+            app:text_money_count="@string/tab3_lottery_rotate_2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/step1" />
+
+        <com.example.mycalculate.custom.CustomEditView
+            android:id="@+id/step3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:num_edit="3"
+            app:text_edit="@string/tab3_lottery_rotate_3"
+            app:layout_constraintTop_toBottomOf="@+id/step2" />
+
+        <com.example.mycalculate.custom.CustomEditView
+            android:id="@+id/step4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/step3"
+            app:num_edit="4"
+            app:text_edit="@string/tab3_lottery_rotate_4" />
+
+        <TextView
+            android:id="@+id/tvResult"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:textSize="18sp"
+            android:text="@string/tab3_lottery_result"
+            android:padding="20dp"
+            app:layout_constraintEnd_toStartOf="@+id/btnCheck"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/step4" />
+        <Button
+            android:id="@+id/btnCheck"
+            android:layout_width="88dp"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_ok"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvResult"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvResult" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

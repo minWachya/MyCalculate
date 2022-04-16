@@ -25,7 +25,7 @@ class Tab3LotteryFragment : Fragment() {
         // 8번의 <확인> 버튼 누르면 정산 시작
         // 전 근무자 재고 금액 + 추가 금액 - 현금 판매액 - 당첨 지급액 == 재고 금액인지 확인
         binding.btnCheck.setOnClickListener {
-            val prevMoney = binding.edtTextPrev.text.toString().toIntOrNull() ?: 0  // 전 근무자 재고 금액
+            val prevMoney = binding.step8.getEditText().toIntOrNull() ?: 0  // 전 근무자 재고 금액
             val plusMoney = binding.step2.getResult().toIntOrNull() ?: 0   // 추가 금액
             val curMoney = binding.step4.getResult().toIntOrNull() ?: 0    // 현금 판매액
             val winMoney = binding.step5.getEditText().toIntOrNull() ?: 0   // 당복 지급액

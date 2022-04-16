@@ -309,7 +309,7 @@
             android:id="@+id/btnCheck"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/tab3_lottery_8"
+            android:text="@string/btn_ok"
             android:layout_marginEnd="20dp"
             android:layout_marginBottom="20dp"
             app:layout_constraintBottom_toBottomOf="@+id/tvResult"

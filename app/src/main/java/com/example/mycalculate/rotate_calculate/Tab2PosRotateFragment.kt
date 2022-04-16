@@ -65,7 +65,7 @@ class Tab2PosRotateFragment : Fragment() {
     // 1. 로그인 후 현금 값 계산 + 50,000
     private fun evalPlus50000() {
         // '-' 문자로 숫자 나누기
-        val arr = binding.step1.text.toString().split("-")
+        val arr = binding.step1.text.toString().split("+")
         var sum = 0
         for(num in arr) sum += (num.toIntOrNull() ?: 0)
         resultLogin = sum + 50000

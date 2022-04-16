@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">알바 정산</string>
+    <string name="btn_ok">확인</string>
 
     <!--activity_main.xml-->
     <string name="main_btn_calculate">마감 정산</string>
@@ -41,7 +42,7 @@
     <!--1, 로또 교대 정산 순서-->
     <!--fragment_tab1_lotto_rotate.xml-->
     <string name="tab1_lotto_rotate_1">돈 세기</string>
-    <!--2, 포스 정산 순서-->
+    <!--2, 포스 교대 정산 순서-->
     <!--fragment_tab2_pos_rotate.xml-->
     <string name="tab2_pos_rotate_1">로그인 후 현금값</string>
     <string name="tab2_pos_rotate_1_type">+ 50,000</string>
@@ -50,6 +51,21 @@
     <string name="tab2_pos_rotate_100">100원</string>
     <string name="tab2_pos_rotate_50">50원</string>
     <string name="tab2_pos_rotate_10">10원</string>
+    <!--3, 복권 교대 정산 순서-->
+    <!--fragment_tab3_lottery_rotate.xml-->
+    <string name="tab3_lottery_rotate_1">재고 금액 세기</string>
+    <string name="tab3_lottery_rotate_2">돈 세기</string>
+    <string name="tab3_lottery_rotate_3">당첨 금액</string>
+    <string name="tab3_lottery_rotate_4">이전 근무자 재고 금액</string>
+    <!--4, 토토 교대 정산 순서-->
+    <!--fragment_tab4_toto_rotate.xml-->
+    <string name="tab4_toto_rotate_1">내가 뽑은 \'현시점 매출 조회\'</string>
+    <string name="tab4_toto_rotate_1_1">전체 현금</string>
+    <string name="tab4_toto_rotate_1_2">전체 환급 + 환불</string>
+    <string name="tab4_toto_rotate_1_type">전체 판매금</string>
+    <string name="tab4_toto_rotate_2">이전 \'현시점 매출 조회\'</string>
+    <string name="tab4_toto_rotate_2_type">이전 판매금</string>
+    <string name="tab4_toto_rotate_3">1번 - 2번</string>
 
     <!--마감 정산-->
     <!--1, 로또 정산 순서-->
@@ -79,8 +95,7 @@
     <string name="tab3_lottery_5">당복지급액 적기</string>
     <string name="tab3_lottery_6">당첨금 지금 초기화</string>
     <string name="tab3_lottery_7">돈, 당첨복권 빼고 묶기</string>
-    <string name="tab3_lottery_8">확인</string>
-    <string name="tab3_lottery_8_1">이전 근무자 재고 금액</string>
+    <string name="tab3_lottery_8">이전 근무자 재고 금액</string>
     <string name="tab3_lottery_result">결과</string>
     <!--4, 토토 정산 순서-->
     <string name="tab4_toto_1">돈 세기</string>

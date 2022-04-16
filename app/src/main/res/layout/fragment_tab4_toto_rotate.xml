@@ -1,14 +1,243 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".rotate_calculate.Tab4TotoRotateFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <!--4. 토토 교대 정산-->
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
 
-</FrameLayout>
+        <com.example.mycalculate.custom.CustomBasicView
+            android:id="@+id/step1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:num_basic="1"
+            app:text_basic="@string/tab4_toto_rotate_1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/step1_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:paddingBottom="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/step1">
+            <!--전체 판매금-->
+            <TextView
+                android:id="@+id/tvAll"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="@string/tab4_toto_rotate_1_1"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/edtAll"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/edtAll" />
+            <EditText
+                android:id="@+id/edtAll"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:hint="@string/custom_lottery_hint"
+                android:inputType="number"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/tvAll"
+                app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/custom_lottery_count"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/edtAll"
+                app:layout_constraintStart_toEndOf="@+id/edtAll"
+                app:layout_constraintTop_toTopOf="@+id/edtAll" />
+            <!--전체 환급_환불-->
+            <TextView
+                android:id="@+id/tvAllRefund"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/tab4_toto_rotate_1_2"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/edtAllRefund"
+                app:layout_constraintStart_toStartOf="@+id/step1_1"
+                app:layout_constraintTop_toBottomOf="@+id/tvAll" />
+            <EditText
+                android:id="@+id/edtAllRefund"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:hint="@string/custom_lottery_hint"
+                android:inputType="phone"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/tvAllRefund"
+                app:layout_constraintTop_toBottomOf="@+id/edtAll" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/tab4_toto_count"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/edtAllRefund"
+                app:layout_constraintStart_toEndOf="@+id/edtAllRefund"
+                app:layout_constraintTop_toTopOf="@+id/edtAllRefund" />
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_margin="10dp"
+                android:background="@color/black"
+                app:layout_constraintTop_toBottomOf="@+id/edtAllRefund"
+                tools:layout_editor_absoluteX="30dp" />
+            <TextView
+                android:id="@+id/tvCalculateType1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/tab4_toto_rotate_1_type"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/tvAll"
+                app:layout_constraintTop_toBottomOf="@+id/view1" />
+
+            <TextView
+                android:id="@+id/tvCurAllResult1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/custom_lottery_result"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/tvCalculateType1"
+                app:layout_constraintEnd_toEndOf="@+id/edtAllRefund"
+                app:layout_constraintTop_toTopOf="@+id/tvCalculateType1" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.example.mycalculate.custom.CustomBasicView
+            android:id="@+id/step2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/step1_1"
+            app:num_basic="2"
+            app:text_basic="@string/tab4_toto_rotate_2" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/step2_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:paddingBottom="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/step2">
+            <!--이전 전체 판매금-->
+            <TextView
+                android:id="@+id/tvAllPrev"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="@string/tab4_toto_rotate_1_1"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/edtAllPrev"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/edtAllPrev" />
+            <EditText
+                android:id="@+id/edtAllPrev"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:hint="@string/custom_lottery_hint"
+                android:inputType="number"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/tvAllPrev"
+                app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/custom_lottery_count"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/edtAllPrev"
+                app:layout_constraintStart_toEndOf="@+id/edtAllPrev"
+                app:layout_constraintTop_toTopOf="@+id/edtAllPrev" />
+            <!--이전 전체 환급_환불-->
+            <TextView
+                android:id="@+id/tvAllRefundPrev"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/tab4_toto_rotate_1_2"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/edtAllRefundPrev"
+                app:layout_constraintStart_toStartOf="@+id/step2_1"
+                app:layout_constraintTop_toBottomOf="@+id/tvAllPrev" />
+            <EditText
+                android:id="@+id/edtAllRefundPrev"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:hint="@string/custom_lottery_hint"
+                android:inputType="phone"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/tvAllRefundPrev"
+                app:layout_constraintTop_toBottomOf="@+id/edtAllPrev" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/tab4_toto_count"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/edtAllRefundPrev"
+                app:layout_constraintStart_toEndOf="@+id/edtAllRefundPrev"
+                app:layout_constraintTop_toTopOf="@+id/edtAllRefundPrev" />
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_margin="10dp"
+                android:background="@color/black"
+                app:layout_constraintTop_toBottomOf="@+id/edtAllRefundPrev"
+                tools:layout_editor_absoluteX="30dp" />
+
+            <TextView
+                android:id="@+id/tvCalculateType2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/tab4_toto_rotate_2_type"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/tvAllPrev"
+                app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+            <TextView
+                android:id="@+id/tvCurAllResult2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/custom_lottery_result"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/tvCalculateType2"
+                app:layout_constraintEnd_toEndOf="@+id/edtAllPrev"
+                app:layout_constraintTop_toTopOf="@+id/tvCalculateType2" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.example.mycalculate.custom.CustomBasicView
+            android:id="@+id/step3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/step2_1"
+            app:num_basic="3"
+            app:text_basic="@string/tab4_toto_rotate_3" />
+
+        <TextView
+            android:id="@+id/tvResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:layout_marginStart="20dp"
+            android:text="@string/custom_lottery_result"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@+id/step3" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
