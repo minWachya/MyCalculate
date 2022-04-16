@@ -1,18 +1,27 @@
 package com.example.mycalculate.custom
 
+import android.R.color
 import android.content.Context
+import android.content.res.ColorStateList
 import android.content.res.TypedArray
+import android.graphics.Color
+import android.os.Build
 import android.util.AttributeSet
+import android.util.Log
 import android.view.LayoutInflater
+import android.widget.CheckBox
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.example.mycalculate.R
+
 
 // 기본 위젯(순서+내용+체크박스)
 class CustomBasicView : ConstraintLayout {
     // 커스텀 뷰 안에 들어가는 아이템
     lateinit var tvNum: TextView         // 순서
     lateinit var tvText: TextView        // 내용
+//    lateinit var checkBox: CheckBox      // 체크박스
+//    lateinit var color: Color            // 체크박스 색생
 
     // 생성자
     constructor(context: Context?) : super(context!!){
@@ -29,6 +38,7 @@ class CustomBasicView : ConstraintLayout {
         addView(view)
         tvNum = view.findViewById(R.id.tvNum)
         tvText = view.findViewById(R.id.tvText)
+//        checkBox = view.findViewById(R.id.checkBox)
     }
 
     // 속성 가져오기

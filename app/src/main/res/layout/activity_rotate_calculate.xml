@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:tabIndicatorColor="@color/purple_200"
+        app:tabIndicatorColor="@color/orange"
         app:tabIndicatorGravity="bottom"
         app:tabIndicatorHeight="3dp">
         <com.google.android.material.tabs.TabItem

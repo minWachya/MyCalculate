@@ -228,7 +228,7 @@
             app:text_basic="@string/tab4_toto_rotate_3" />
 
         <TextView
-            android:id="@+id/tvResult"
+            android:id="@+id/tvNumResult"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="20dp"
@@ -236,6 +236,35 @@
             android:text="@string/custom_lottery_result"
             android:textSize="18sp"
             app:layout_constraintTop_toBottomOf="@+id/step3" />
+
+        <com.example.mycalculate.custom.CustomMoneyCountView
+            android:id="@+id/step4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:text_money_count="@string/tab4_toto_rotate_4"
+            app:num_money_count="4"
+            app:layout_constraintTop_toBottomOf="@+id/tvNumResult" />
+
+        <TextView
+            android:id="@+id/tvResult"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:textSize="18sp"
+            android:text="@string/tab3_lottery_result"
+            android:padding="20dp"
+            app:layout_constraintEnd_toStartOf="@+id/btnCheck"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/step4" />
+        <Button
+            android:id="@+id/btnCheck"
+            android:layout_width="88dp"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_ok"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvResult"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvResult" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
