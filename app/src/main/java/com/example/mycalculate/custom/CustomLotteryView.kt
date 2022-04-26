@@ -24,6 +24,7 @@ class CustomLotteryView : ConstraintLayout {
     lateinit var edt2000: EditText       // 2000원 낱개 갯수 입력창
     lateinit var edt1000Set: EditText    // 1000원 세트 갯수 입력창
     lateinit var edt1000: EditText       // 1000원 낱개 갯수 입력창
+    lateinit var edtYearSet: EditText    // 연금 세트 갯수 입력 창
     lateinit var edtYear: EditText       // 연금 갯수 입력 창
     lateinit var tvType: TextView        // 정산 타입
     lateinit var tvResult: TextView      // 정산 결과 TextView
@@ -52,6 +53,7 @@ class CustomLotteryView : ConstraintLayout {
         edt2000 = view.findViewById(R.id.edt2000)
         edt1000Set = view.findViewById(R.id.edt1000_set)
         edt1000 = view.findViewById(R.id.edt1000)
+        edtYearSet = view.findViewById(R.id.edtYearSet)
         edtYear = view.findViewById(R.id.edtYear)
         tvType = view.findViewById(R.id.tvCalculateType)
         tvResult = view.findViewById(R.id.tvCalculateResult)
@@ -92,6 +94,7 @@ class CustomLotteryView : ConstraintLayout {
         edt2000.doOnTextChanged { _, _, _, _ -> calculateMoney() }
         edt1000Set.doOnTextChanged { _, _, _, _ -> calculateMoney() }
         edt1000.doOnTextChanged { _, _, _, _ -> calculateMoney() }
+        edtYearSet.doOnTextChanged { _, _, _, _ -> calculateMoney() }
         edtYear.doOnTextChanged { _, _, _, _ -> calculateMoney() }
     }
     // 돈 입력 시 바로 계산하기
@@ -100,10 +103,12 @@ class CustomLotteryView : ConstraintLayout {
         val count2000 = edt2000.text.toString().toIntOrNull() ?: 0
         val count1000Set = edt1000Set.text.toString().toIntOrNull() ?: 0
         val count1000 = edt1000.text.toString().toIntOrNull() ?: 0
+        val countYearSet = edtYearSet.text.toString().toIntOrNull() ?: 0
         val countYear = edtYear.text.toString().toIntOrNull() ?: 0
 
         result = 2000*2*count2000Set + 2000*count2000 +
-                1000*4*count1000Set + 1000*count1000 + 1000*countYear
+                1000*4*count1000Set + 1000*count1000 +
+                1000*5*countYearSet + 1000*countYear
         tvResult.text = numberFormat.format(result).toString()
     }
 

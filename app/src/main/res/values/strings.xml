@@ -28,6 +28,7 @@
     <string name="custom_lottery_1000">1000</string>
     <string name="custom_lottery_1000x">x 4 +</string>
     <string name="custom_lottery_year">연금</string>
+    <string name="custom_lottery_yearx">x 5 +</string>
     <string name="custom_lottery_count">개</string>
     <string name="custom_lottery_type">정산 타입</string>
     <string name="custom_lottery_result">계산 결과</string>
