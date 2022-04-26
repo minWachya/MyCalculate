@@ -1,9 +1,11 @@
 package com.example.mycalculate.custom
 
 import android.content.Context
+import android.content.res.ColorStateList
 import android.content.res.TypedArray
 import android.util.AttributeSet
 import android.view.LayoutInflater
+import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
@@ -17,6 +19,7 @@ class CustomLotteryView : ConstraintLayout {
     // 커스텀 뷰 안에 들어가는 아이템
     lateinit var tvNum: TextView         // 순서
     lateinit var tvText: TextView        // 내용
+    lateinit var checkBox: CheckBox      // 체크박스
     lateinit var edt2000Set: EditText    // 2000원 세트 갯수 입력창
     lateinit var edt2000: EditText       // 2000원 낱개 갯수 입력창
     lateinit var edt1000Set: EditText    // 1000원 세트 갯수 입력창
@@ -44,6 +47,7 @@ class CustomLotteryView : ConstraintLayout {
         addView(view)
         tvNum = view.findViewById(R.id.tvNum)
         tvText = view.findViewById(R.id.tvText)
+        checkBox = view.findViewById(R.id.checkBox)
         edt2000Set = view.findViewById(R.id.edt2000_set)
         edt2000 = view.findViewById(R.id.edt2000)
         edt1000Set = view.findViewById(R.id.edt1000_set)
@@ -56,11 +60,11 @@ class CustomLotteryView : ConstraintLayout {
     // 속성 가져오기
     private fun getAttrs(attrs: AttributeSet?) {
         val typedArray = context.obtainStyledAttributes(attrs, R.styleable.CustomLotteryView)
-        setTypeArray(typedArray)
+        setTypeArray(typedArray, attrs)
     }
 
     // 속성 사용하기
-    private fun setTypeArray(typedArray : TypedArray) {
+    private fun setTypeArray(typedArray : TypedArray, attrs: AttributeSet?) {
         // 순서: CustomLotteryView 이름으로 만든 attrs.xml 속성중 num_lottery 참조
         val num = typedArray.getText(R.styleable.CustomLotteryView_num_lottery)
         tvNum.text = num
@@ -69,11 +73,17 @@ class CustomLotteryView : ConstraintLayout {
         val text = typedArray.getText(R.styleable.CustomLotteryView_text_lottery)
         tvText.text = text
 
+        // 체크박스 색: CustomLotteryView 이름으로 만든 attrs.xml 속성중 btnTInt_lottery 참조
+        val a = context.obtainStyledAttributes(attrs, R.styleable.CustomLotteryView)
+        val btnTIntColor = a.getColor(R.styleable.CustomLotteryView_btnTInt_lottery, 0xFFBB86FC.toInt())
+        checkBox.buttonTintList = ColorStateList.valueOf(btnTIntColor)
+
         // 정산 타입: CustomLotteryView 이름으로 만든 attrs.xml 속성중 option1_text_lottery 참조
         val type = typedArray.getText(R.styleable.CustomLotteryView_type_lottery)
         tvType.text = type
 
         typedArray.recycle()
+        a.recycle()
     }
 
     // 리스너 달기: 복권 숫자 입력 시 자동 정산

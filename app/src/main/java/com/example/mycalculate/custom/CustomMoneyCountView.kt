@@ -1,9 +1,11 @@
 package com.example.mycalculate.custom
 
 import android.content.Context
+import android.content.res.ColorStateList
 import android.content.res.TypedArray
 import android.util.AttributeSet
 import android.view.LayoutInflater
+import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
@@ -17,6 +19,7 @@ class CustomMoneyCountView : ConstraintLayout {
     // 커스텀 뷰 안에 들어가는 아이템
     lateinit var tvNum: TextView         // 순서
     lateinit var tvText: TextView        // 내용
+    lateinit var checkBox: CheckBox      // 체크박스
     lateinit var edt50000: EditText      // 50,000원 갯수 입력창
     lateinit var edt10000: EditText      // 10,000원 갯수 입력창
     lateinit var edt5000: EditText       // 5,000원 갯수 입력창
@@ -42,6 +45,7 @@ class CustomMoneyCountView : ConstraintLayout {
         addView(view)
         tvNum = view.findViewById(R.id.tvNum)
         tvText = view.findViewById(R.id.tvText)
+        checkBox = view.findViewById(R.id.checkBox)
         edt50000 = view.findViewById(R.id.edt50000)
         edt10000 = view.findViewById(R.id.edt10000)
         edt5000 = view.findViewById(R.id.edt5000)
@@ -53,11 +57,11 @@ class CustomMoneyCountView : ConstraintLayout {
     // 속성 가져오기
     private fun getAttrs(attrs: AttributeSet?) {
         val typedArray = context.obtainStyledAttributes(attrs, R.styleable.CustomMoneyCountView)
-        setTypeArray(typedArray)
+        setTypeArray(typedArray, attrs)
     }
 
     // 속성 사용하기
-    private fun setTypeArray(typedArray : TypedArray) {
+    private fun setTypeArray(typedArray : TypedArray, attrs: AttributeSet?) {
         // 순서: CustomMoneyCountView 이름으로 만든 attrs.xml 속성중 num_money_count 참조
         val num = typedArray.getText(R.styleable.CustomMoneyCountView_num_money_count)
         tvNum.text = num
@@ -66,7 +70,13 @@ class CustomMoneyCountView : ConstraintLayout {
         val text = typedArray.getText(R.styleable.CustomMoneyCountView_text_money_count)
         tvText.text = text
 
+        // 체크박스 색: CustomMoneyCountView 이름으로 만든 attrs.xml 속성중 btnTInt_money_count 참조
+        val a = context.obtainStyledAttributes(attrs, R.styleable.CustomMoneyCountView)
+        val btnTIntColor = a.getColor(R.styleable.CustomMoneyCountView_btnTInt_money_count, 0xFFBB86FC.toInt())
+        checkBox.buttonTintList = ColorStateList.valueOf(btnTIntColor)
+
         typedArray.recycle()
+        a.recycle()
     }
 
     // 리스너 달기: 돈 갯수 입력 시 자동 정산

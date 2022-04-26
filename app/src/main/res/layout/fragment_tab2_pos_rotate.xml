@@ -18,7 +18,8 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:num_basic="1"
-            app:text_basic="@string/tab2_pos_rotate_1" />
+            app:text_basic="@string/tab2_pos_rotate_1"
+            app:btnTInt_basic="@color/orange"/>
 
         <EditText
             android:id="@+id/step1"
@@ -100,7 +101,7 @@
                 android:id="@+id/checkBox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:buttonTint="@color/purple_200"
+                android:buttonTint="@color/orange"
                 app:layout_constraintBottom_toBottomOf="@+id/tvText"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/tvText" />

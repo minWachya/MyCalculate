@@ -1,9 +1,11 @@
 package com.example.mycalculate.custom
 
 import android.content.Context
+import android.content.res.ColorStateList
 import android.content.res.TypedArray
 import android.util.AttributeSet
 import android.view.LayoutInflater
+import android.widget.CheckBox
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.example.mycalculate.R
@@ -13,6 +15,7 @@ class CustomOptionView : ConstraintLayout {
     // 커스텀 뷰 안에 들어가는 아이템
     lateinit var tvNum: TextView         // 순서
     lateinit var tvText: TextView        // 내용
+    lateinit var checkBox: CheckBox      // 체크박스
     lateinit var tvOption1: TextView     // option1
     lateinit var tvOption2: TextView     // option2
 
@@ -31,6 +34,7 @@ class CustomOptionView : ConstraintLayout {
         addView(view)
         tvNum = view.findViewById(R.id.tvNum)
         tvText = view.findViewById(R.id.tvText)
+        checkBox = view.findViewById(R.id.checkBox)
         tvOption1 = view.findViewById(R.id.tvOption1)
         tvOption2 = view.findViewById(R.id.tvOption2)
     }
@@ -38,11 +42,11 @@ class CustomOptionView : ConstraintLayout {
     // 속성 가져오기
     private fun getAttrs(attrs: AttributeSet?){
         val typedArray = context.obtainStyledAttributes(attrs, R.styleable.CustomOptionView)
-        setTypeArray(typedArray)
+        setTypeArray(typedArray, attrs)
     }
 
     // 속성 사용하기
-    private fun setTypeArray(typedArray : TypedArray) {
+    private fun setTypeArray(typedArray : TypedArray, attrs: AttributeSet?) {
         // 순서: CustomOptionView 이름으로 만든 attrs.xml 속성중 num_option 참조
         val num = typedArray.getText(R.styleable.CustomOptionView_num_option)
         tvNum.text = num
@@ -50,6 +54,11 @@ class CustomOptionView : ConstraintLayout {
         // 내용: CustomOptionView 이름으로 만든 attrs.xml 속성중 text_option 참조
         val text = typedArray.getText(R.styleable.CustomOptionView_text_option)
         tvText.text = text
+
+        // 체크박스 색: CustomOptionView 이름으로 만든 attrs.xml 속성중 btnTInt_option 참조
+        val a = context.obtainStyledAttributes(attrs, R.styleable.CustomOptionView)
+        val btnTIntColor = a.getColor(R.styleable.CustomOptionView_btnTInt_option, 0xFFBB86FC.toInt())
+        checkBox.buttonTintList = ColorStateList.valueOf(btnTIntColor)
 
         // 옵션1: CustomOptionView 이름으로 만든 attrs.xml 속성중 option1_text 참조
         val option1 = typedArray.getText(R.styleable.CustomOptionView_option1_text)
@@ -60,5 +69,6 @@ class CustomOptionView : ConstraintLayout {
         tvOption2.text = option2
 
         typedArray.recycle()
+        a.recycle()
     }
 }

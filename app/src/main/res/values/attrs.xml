@@ -4,7 +4,7 @@
     <declare-styleable name="CustomBasicView">
         <attr name="num_basic" format="reference|string" />
         <attr name="text_basic" format="reference|string" />
-        <attr name="btnTInt_basic" format="color" />
+        <attr name="btnTInt_basic" format="reference|color" />
     </declare-styleable>
 
     <!--EditTest 커스텀 뷰-->

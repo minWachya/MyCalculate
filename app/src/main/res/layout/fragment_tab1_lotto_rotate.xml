@@ -16,7 +16,8 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:num_money_count="1"
-            app:text_money_count="@string/tab1_lotto_rotate_1" />
+            app:text_money_count="@string/tab1_lotto_rotate_1"
+            app:btnTInt_money_count="@color/orange"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.core.widget.NestedScrollView>

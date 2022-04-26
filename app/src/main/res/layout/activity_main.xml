@@ -13,8 +13,8 @@
         android:layout_margin="20dp"
         android:background="@color/orange"
         android:text="@string/main_btn_rotate_calculate"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toTopOf="@+id/btn_calculate"
+        tools:layout_editor_absoluteX="20dp" />
 
     <Button
         android:id="@+id/btn_calculate"
@@ -23,8 +23,9 @@
         android:layout_margin="20dp"
         android:background="@color/purple_200"
         android:text="@string/main_btn_calculate"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_rotate_calculate" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="20dp" />
 
     <Button
         android:id="@+id/btn_close"
@@ -32,7 +33,6 @@
         android:layout_height="100dp"
         android:layout_margin="20dp"
         android:text="@string/main_btn_close"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_calculate" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -15,6 +15,7 @@
             android:id="@+id/step1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:btnTInt_basic="@color/orange"
             app:num_basic="1"
             app:text_basic="@string/tab4_toto_rotate_1"
             app:layout_constraintStart_toStartOf="parent"
@@ -120,6 +121,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@+id/step1_1"
+            app:btnTInt_basic="@color/orange"
             app:num_basic="2"
             app:text_basic="@string/tab4_toto_rotate_2" />
 
@@ -224,6 +226,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@+id/step2_1"
+            app:btnTInt_basic="@color/orange"
             app:num_basic="3"
             app:text_basic="@string/tab4_toto_rotate_3" />
 
@@ -241,6 +244,7 @@
             android:id="@+id/step4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:btnTInt_money_count="@color/orange"
             app:text_money_count="@string/tab4_toto_rotate_4"
             app:num_money_count="4"
             app:layout_constraintTop_toBottomOf="@+id/tvNumResult" />

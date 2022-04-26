@@ -17,6 +17,7 @@
             android:layout_height="wrap_content"
             app:text_lottery="@string/tab3_lottery_rotate_1"
             app:num_lottery="1"
+            app:btnTInt_lottery="@color/orange"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -24,6 +25,7 @@
             android:id="@+id/step2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:btnTInt_money_count="@color/orange"
             app:num_money_count="2"
             app:text_money_count="@string/tab3_lottery_rotate_2"
             app:layout_constraintStart_toStartOf="parent"
@@ -35,6 +37,7 @@
             android:layout_height="wrap_content"
             app:num_edit="3"
             app:text_edit="@string/tab3_lottery_rotate_3"
+            app:btnTInt_edt="@color/orange"
             app:layout_constraintTop_toBottomOf="@+id/step2" />
 
         <com.example.mycalculate.custom.CustomEditView
@@ -42,6 +45,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@+id/step3"
+            app:btnTInt_edt="@color/orange"
             app:num_edit="4"
             app:text_edit="@string/tab3_lottery_rotate_4" />
 
