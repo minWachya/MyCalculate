@@ -88,7 +88,11 @@
     <string name="tab2_pos_2">\'메뉴\' &gt; \'마감정산\' &gt; 돈입력</string>
     <string name="tab2_pos_3">엔터 &gt; 다음 근무자 로그인</string>
     <string name="tab2_pos_4">#마감 입금# - 50,000 뺀 금액 적기</string>
+    <string name="tab2_pos_4_1">#마감 입금#</string>
+    <string name="tab2_pos_4_2">\- 50,000 =</string>
+    <string name="tab2_pos_4_3">계산 결과</string>
     <string name="tab2_pos_5">#계산원 정산 현황#의 \'현금매출\'과 비교</string>
+    <string name="tab2_pos_5_1">\'현금매출\'</string>
     <string name="tab2_pos_6">돈 빼고 묶기</string>
     <!--3, 복권 정산 순서-->
     <!--fragment_tab3_lottery.xml-->
