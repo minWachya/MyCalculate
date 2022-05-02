@@ -76,8 +76,12 @@
     <string name="tab1_lotto_2">보고서 &gt; 영업 보고서 &gt; 2장 인쇄</string>
     <string name="tab1_lotto_2_1">1장 보관</string>
     <string name="tab1_lotto_2_2">1장 여백에 돈 센 거 적기</string>
-    <string name="tab1_lotto_3">돈 빼고 묶기</string>
-    <string name="tab1_lotto_4">로또인수인계대장 + 야간 체크</string>
+    <string name="tab1_lotto_3">거래내역 적기(확인용)</string>
+    <string name="tab1_lotto_4">거래내역 삭제</string>
+    <string name="tab1_lotto_5">돈 빼고 묶기</string>
+    <string name="tab1_lotto_6">로또인수인계대장 + 야간 체크</string>
+    <string name="tab1_lotto_6_1">야간 판매</string>
+    <string name="tab1_lotto_6_2">야간 잔액</string>
     <!--2, 포스 정산 순서-->
     <!--fragment_tab2_pos.xml-->
     <string name="tab2_pos_1">동전 분류</string>

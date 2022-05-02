@@ -35,19 +35,89 @@
             android:id="@+id/step3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:text_basic="@string/tab1_lotto_3"
             app:num_basic="3"
+            app:text_basic="@string/tab1_lotto_3"
+            android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/step2" />
+        <EditText
+            android:id="@+id/step3EditCheck"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:inputType="number"
+            android:hint="@string/custom_lottery_hint"
+            app:layout_constraintEnd_toStartOf="@+id/step3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/step3" />
 
         <com.example.mycalculate.custom.CustomBasicView
             android:id="@+id/step4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:text_basic="@string/tab1_lotto_4"
-            app:num_basic="4"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/step3" />
+            app:layout_constraintTop_toBottomOf="@+id/step3EditCheck"
+            app:num_basic="4"
+            app:text_basic="@string/tab1_lotto_4" />
+
+        <com.example.mycalculate.custom.CustomBasicView
+            android:id="@+id/step5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:text_basic="@string/tab1_lotto_5"
+            app:num_basic="5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/step4" />
+
+        <com.example.mycalculate.custom.CustomBasicView
+            android:id="@+id/step6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:text_basic="@string/tab1_lotto_6"
+            app:num_basic="6"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/step5" />
+
+        <EditText
+            android:id="@+id/step6EditSale"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:inputType="number"
+            android:hint="@string/tab1_lotto_6_1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/step6" />
+        <EditText
+            android:id="@+id/step6EditBalance"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:hint="@string/tab1_lotto_6_2"
+            android:inputType="phone"
+            android:digits="0123456789+"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/step6EditSale"
+            app:layout_constraintTop_toBottomOf="@+id/step6" />
+
+        <TextView
+            android:id="@+id/textResult"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:textSize="18sp"
+            android:text="@string/tab3_lottery_result"
+            android:padding="20dp"
+            app:layout_constraintEnd_toStartOf="@+id/btnOk"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/step6EditSale" />
+        <Button
+            android:id="@+id/btnOk"
+            android:layout_width="88dp"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_ok"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textResult"
+            app:layout_constraintEnd_toEndOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
