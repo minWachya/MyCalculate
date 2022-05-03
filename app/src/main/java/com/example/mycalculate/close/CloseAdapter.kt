@@ -3,6 +3,7 @@ package com.example.mycalculate.close
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ProgressBar
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mycalculate.databinding.ListItemCloseBinding
 
@@ -10,7 +11,7 @@ data class CloseList(val num: String, val text: String)
 
 private lateinit var binding: ListItemCloseBinding
 
-class CloseAdapter : RecyclerView.Adapter<CloseAdapter.ViewHolder>() {
+class CloseAdapter(val progressBar: ProgressBar) : RecyclerView.Adapter<CloseAdapter.ViewHolder>() {
     val arrCloseList = ArrayList<CloseList>() // 알림 배열
 
     // 뷰홀더 생성
@@ -31,6 +32,11 @@ class CloseAdapter : RecyclerView.Adapter<CloseAdapter.ViewHolder>() {
         fun setItem(item: CloseList) {
             binding.tvNum.text = item.num
             binding.tvText.text = item.text
+            // 체크박스 클릭 시 프로그래스 바 채우기
+            binding.checkBox.setOnCheckedChangeListener { _, isCheck ->
+                if (isCheck) progressBar.progress = progressBar.progress + 1
+                else progressBar.progress = progressBar.progress - 1
+            }
         }
     }
 
