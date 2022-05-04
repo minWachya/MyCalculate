@@ -19,7 +19,7 @@ class CloseActivity : AppCompatActivity() {
         val layoutManager = LinearLayoutManager(applicationContext)
         binding.recyclerView.layoutManager = layoutManager
         // 리사이클러뷰에 어댑터 달기
-        val closeAdapter = CloseAdapter(binding.progressBar)
+        val closeAdapter = CloseAdapter(binding.progressBar, binding.heartAni)
         binding.recyclerView.adapter = closeAdapter
         // divider 추가
         binding.recyclerView.addItemDecoration(DividerItemDecoration(applicationContext, DividerItemDecoration.VERTICAL))

@@ -5,13 +5,14 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ProgressBar
 import androidx.recyclerview.widget.RecyclerView
+import com.airbnb.lottie.LottieAnimationView
 import com.example.mycalculate.databinding.ListItemCloseBinding
 
 data class CloseList(val num: String, val text: String)
 
 private lateinit var binding: ListItemCloseBinding
 
-class CloseAdapter(val progressBar: ProgressBar) : RecyclerView.Adapter<CloseAdapter.ViewHolder>() {
+class CloseAdapter(val progressBar: ProgressBar, val aniView: LottieAnimationView) : RecyclerView.Adapter<CloseAdapter.ViewHolder>() {
     val arrCloseList = ArrayList<CloseList>() // 알림 배열
 
     // 뷰홀더 생성
@@ -36,6 +37,13 @@ class CloseAdapter(val progressBar: ProgressBar) : RecyclerView.Adapter<CloseAda
             binding.checkBox.setOnCheckedChangeListener { _, isCheck ->
                 if (isCheck) progressBar.progress = progressBar.progress + 1
                 else progressBar.progress = progressBar.progress - 1
+
+                // 프로그래스 바 다 채우면 애니메이션 실행
+                if (progressBar.progress == progressBar.max) {
+                    aniView.visibility = View.VISIBLE
+                    aniView.pauseAnimation()
+                }
+                else aniView.visibility = View.INVISIBLE
             }
         }
     }
